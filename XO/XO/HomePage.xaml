@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XO.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XO.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="play XO"
+    BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="icon01.png" />
+
+        <Label
+            x:Name="la"
+            Grid.Row="1"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="start"
+            TextColor="White"
+            VerticalOptions="CenterAndExpand" />
+
+        <Button
+            x:Name="bu2"
+            Grid.Row="2"
+            BackgroundColor="#eb3f84"
+            Clicked="Bu2_Clicked"
+            Font="20"
+            HeightRequest="50"
+            Text=" 👤 single player "
+            TextColor="White" />
+
+        <Button
+            x:Name="bu1"
+            Grid.Row="3"
+            BackgroundColor="#eb3f84"
+            Clicked="Bu1_Clicked"
+            Font="20"
+            HeightRequest="50"
+            Text=" 👥 Tow players "
+            TextColor="White" />
+
+        <local:AdControlView
+            Grid.Row="4"
+            AdUnitId="ca-app-pub-2281819401694338/8846560403"
+            HorizontalOptions="EndAndExpand" />
+    </Grid>
+</ContentPage>
